@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-def main():
+if __name__ == "__main__":
     import sys
     num = len(sys.argv)
-    if num == 1:
-        print("{} arguments.".format(num - 1))
-    elif num == 2:
-        print("{} argument:".format(num - 1))
+    num = num - 1
+    if num == 0:
+        print("{} arguments.".format(num))
+    elif num == 1:
+        print("{} argument:".format(num))
     else:
-        print("{} arguments:".format(num - 1))
-
-    for i in range(1, num):
-        print("{}: {}".format(i, sys.argv[i]))
-if __name__ == "__main__":
-    main()
+        print("{} arguments:".format(num))
+        for i in range(1, num+1):
+            print("{}: {}".format(i, sys.argv[i]))
