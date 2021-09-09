@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
+def main():
     import sys
     num = len(sys.argv)
     if num == 1:
@@ -11,3 +11,5 @@ if __name__ == "__main__":
 
     for i in range(1, num):
         print("{}: {}".format(i, sys.argv[i]))
+if __name__ == "__main__":
+    main()
