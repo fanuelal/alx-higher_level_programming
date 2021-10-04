@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+""" 
+module of rectangle
+"""
+
+class rectangle:
+    """
+    empty rectangle module
+    """
+    pass
