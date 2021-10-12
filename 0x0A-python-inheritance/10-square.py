@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""This module creates a Square class that inherts from BaseGeometry"""
+"""This module creates a class named Square"""
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
-    """A class named BaseGeometry
+class Square(Rectangle):
+    """A class named Square
     Attributes:
-    attr1(size): width of square
+    attr1(size): size of square
+    attr2(area): finds the area of it
     """
     def __init__(self, size):
-        """initializes an instance"""
+        """Initializes an instance"""
         self.integer_validator("size", size)
         self.__size = size
-
-    def area(self):
-        """return the area of square"""
-        return self.__size ** 2
+        super().__init__(size, size)
