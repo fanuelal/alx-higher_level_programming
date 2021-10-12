@@ -1,5 +1,6 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """A module that defines a class named MyList"""
+
 
 class MyList(list):
     """A class named MyList
@@ -9,4 +10,3 @@ class MyList(list):
     def print_sorted(self):
         """sorting public instance method"""
         return(sorted(self))
-        
