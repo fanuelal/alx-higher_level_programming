@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""this module is to create load_from_json_file"""
+"""Create object from JSON file module"""
 
 
 def load_from_json_file(filename):
-    """returns the str from json"""
-    with open(filename, 'r') as file:
-        import json
-        return json.loads(file)
+    """Creates an Object from a 'JSON file' and returns it"""
+    import json
+    with open(filename, 'r') as fo:
+        return json.load(fo)
