@@ -1,20 +1,17 @@
 #!/usr/bin/python3
-
-"""
-Add arguments to a list, then save those arguments to a file
-"""
-
-import sys
-import os.path
+"""Load, add, save module"""
 
 
-args = sys.argv[1:]
-
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+from sys import argv
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 
-new = []
-if os.path.exists("./add_item.json"):
-    new = load_from_json_file("add_item.json")
+filename = "add_item.json"
 
-save_to_json_file(new + args, "add_item.json")
+try:
+    my_list = load_from_json_file(filename)
+except:
+    my_list = []
+for a in range(1, len(argv)):
+    my_list.append(argv[a])
+save_to_json_file(my_list, filename)
