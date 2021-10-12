@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this module creates a class named BaseGeometry"""
 
+
 class BaseGeometry:
         """An class named BaseGeometry
     Attributes:
@@ -9,4 +10,3 @@ class BaseGeometry:
         def area(self):
             """raise an exception"""
             raise Exception("area() is not implemented")
-        
