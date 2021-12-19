@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that changes the name of a State object from the database 
+"""a script that changes the name of a State object from the database
 he database hbtn_0e_6_usa"""
 if __name__ == "__main__":
     import sys
@@ -13,6 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state,city in session.query(State, City).filter(City.state_id == State.id).order_by(City.id).all():
+    for state, city in session.query(State, City)
+    .filter(City.state_id == State.id).order_by(City.id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
