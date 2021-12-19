@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a script that lists all State objects that contain the letter a from t\
+"""Write a script that lists all State objects that
+contain the letter a from t\
 he database hbtn_0e_6_usa"""
 if __name__ == "__main__":
     import sys
@@ -12,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    searched =  session.query(State).filter(State.name == sys.argv[4]).first()
+    searched = session.query(State).filter(State.name == sys.argv[4]).first()
     if searched:
         print('{}'.format(searched.id))
     else:
