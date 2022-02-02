@@ -1,9 +1,12 @@
 #!/usr/bin/node
 
 const request = require('request');
-const starWarId = 'https://swapi-api.hbtn.io/api/films/:id'.concat(process.argv[2]);
+const url = 'https://swapi-api.hbtn.io/api/films/:id' + process.argv[2];
 
-request(starWarId, function (_err, _res, body) {
-  body = JSON.parse(body);
-  console.log(body.title);
+request({url: url, json: true}, function (err, res) {
+  if (err) {
+    console.log(err);
+  }else{
+      console.log(res.body.title);
+  }
 });
